@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/dogCeoListFragment">
+
+    <fragment
+        android:id="@+id/dogCeoListFragment"
+        android:name="com.gokselkoc.dogceo.ui.list.DogCeoListFragment"
+        android:label="fragment_dog_ceo_list"
+        tools:layout="@layout/fragment_dog_ceo_list" >
+        <action
+            android:id="@+id/action_dogCeoListFragment_to_dogDetailFragment"
+            app:destination="@id/dogDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogDetailFragment"
+        android:name="com.gokselkoc.dogceo.ui.detail.DogDetailFragment"
+        android:label="DogDetailFragment" >
+        <action
+            android:id="@+id/action_dogDetailFragment_to_dogCeoListFragment"
+            app:destination="@id/dogCeoListFragment" />
+    </fragment>
+</navigation>
